@@ -1,0 +1,58 @@
+"Projeto: Nest com git:JackBravo21":
+
+npm i -g @nestjs/cli
+
+nest new project1
+
+- Se der erro, usar o NPX
+npx new project1
+
+npm run start
+npm run start:dev
+
+- No Src temos o app.listen que escuta na porta que queremos executar os erver;
+await app.listen(3000);
+
+@ antes de algo, sao os decorators. 
+
+src/main.ts     = eh o index.html do sistema praticamente;
+module          = contem os modulos locais, e recebe modulos de outros modulos;
+    module imports: [CoursesModule, UsersModule], (importamos outros modulos no Imports);
+    module controllers: [CoursesController, UsersController], (recebe os controllers locais);
+    module providers: [CoursesService, UsersService], (recebe a declaracao dos services);
+controller      = sao as rotas, temos que colocar o @Controller() que eh um decorator, colocamos as rotas dentro do @Get, @Post, etc;
+service         = contem as funcoes de conexao com o banco de dados;
+dto             = contem os esquemas e interfaces, contem tambem as declaracaoes especificas de dados a serem pesquisados, como "create-course, search-course";
+
+npx @nestjs/cli generate module courses
+npx @nestjs/cli generate controller courses
+npx @nestjs/cli generate service courses
+
+==============================================
+
+- Criar modulo: (para manter o código organizado e estabelecer limites claros (agrupando componentes relacionados));
+$ nest g mo
+
+- Criar controller: (para definir rotas CRUD (ou consultas/mutações para aplicativos GraphQL));
+$ nest g co
+
+- Criar Servico: (para implementar e isolar a lógica de negócios);
+$ nest g s
+$ nest g service name
+
+- Gerando novo recurso CRUD: (O comando não apenas gera todos os blocos de construção do NestJS (módulo, serviço, classes de controlador), mas também uma classe de entidade, classes DTO, bem como os .specarquivos de teste ( ));
+$ nest g resource [nome]
+
+==============================================
+
+controller interage com a rota e o service (model) com os dados, o service (model) recebe a requisicao do controle e o controller interage diretamente com os dados.
+
+//instalar swagger:
+npm install @nestjs/swagger swagger-ui-express
+
+//explicacao swagger:
+@nestjs/swagger: biblioteca do swagger feito para nest;
+swagger-ui-express: eh a que instala a interface grafica;
+
+- Para acessar o swagger:
+http://localhost:3000/api/
