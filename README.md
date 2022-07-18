@@ -46,7 +46,7 @@ $ npm run test:cov
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## Routes
+## Routes of this project
 
 - http://localhost:3000/
 - http://localhost:3000/swagger
