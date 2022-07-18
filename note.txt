@@ -55,4 +55,4 @@ npm install @nestjs/swagger swagger-ui-express
 swagger-ui-express: eh a que instala a interface grafica;
 
 - Para acessar o swagger:
-http://localhost:3000/api/
+http://localhost:3000/swagger/
